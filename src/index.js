@@ -3,9 +3,15 @@ import ReactDOM from 'react-dom';
 import Routes from './routes';
 import * as serviceWorker from './serviceWorker';
 
+
 import { HelmetProvider } from 'react-helmet-async';
 import ProductsContextProvider from './contexts/ProductsContext';
 import CartContextProvider from './contexts/CartContext';
+import Amplify from 'aws-amplify';
+import config from './aws-exports';
+
+
+Amplify.configure(config);
 
 ReactDOM.render(
     <HelmetProvider>
@@ -14,9 +20,13 @@ ReactDOM.render(
           <Routes />
         </CartContextProvider>
       </ProductsContextProvider>
+
     </HelmetProvider>,
   document.getElementById('root')
+  
 );
+
+
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

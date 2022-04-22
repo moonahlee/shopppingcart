@@ -3,6 +3,7 @@ import Layout from '../../components/Layout';
 import logo from './logo.svg';
 
 import ProductsGrid from './ProductsGrid';
+import { withAuthenticator, AmplifySignOut } from '@aws-amplify/ui-react-v1'
 
 const Store = () => {
     
@@ -14,10 +15,12 @@ const Store = () => {
                     <h1>Octank Store</h1>
                     <p>This is the Octank Store Page.</p>
                 </div>
+               
                 <ProductsGrid/>
+                <AmplifySignOut />
             </div>
         </Layout>
      );
 }
  
-export default Store;
+export default  withAuthenticator(Store);
