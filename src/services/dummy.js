@@ -1,13 +1,13 @@
 export const dummyProducts = [
   {
     id: 1,
-    name: "Buffalo - Striploin",
+    name: "Octank Best1 - Striploin",
     price: 39.11,
     photo: "/img/1.jpg",
   },
   {
     id: 2,
-    name: "Bacardi Breezer - Tropical",
+    name: "Octank Best2 - Tropical",
     price: 257.92,
     photo: "/img/2.jpg"
   },
