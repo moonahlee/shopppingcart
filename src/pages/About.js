@@ -11,7 +11,14 @@ const About = () => {
 
                 <a className="btn btn-primary" href="https://github.com/AlexSegen/react-shopping-cart">
                     <GitHubIcon width={"18px"}/> <span className="ml-2 mr-4">Coupon</span></a>
-                    <button type="button" onclick="callAPI(document.getElementById('fName').value,document.getElementById('lName').value)">Call API</button>
+                    <form>
+                        <label>First Name :</label>
+                        <input type="text" id="fName">
+                        <label>Last Name :</label>
+                        <input type="text" id="lName">
+                        <!-- set button onClick method to call function we defined passing input values as parameters -->
+                        <button type="button" onclick="callAPI(document.getElementById('fName').value,document.getElementById('lName').value)">Call API</button>
+                    </form>
 
                     
             </div>
